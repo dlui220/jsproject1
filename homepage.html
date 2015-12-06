@@ -8,41 +8,37 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
    </head>
-   <body onload="loadHome()">
-      <div class="container-fluid">
-         <div class="col-sm-3">
-            <div class="sidebar-nav">
-               <div class="navbar navbar-default" role="navigation">
-                  <div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" onclick="loadHome()">Homepage</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="http://espn.go.com/nba/">ESPN</a></li>
-						<li><a href="#">Link</a></li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Add New Link">
-						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
-					</form>
-				</div>
-				<!-- /.navbar-collapse -->
-               </div>
+   <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Homepage</a>
             </div>
-         </div>
-         <div id="" class="col-sm-9">
-			Hello
-         </div>
-      </div>
-      <script src="script.js"></script>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li id="test" class="http://www.gmail.com"><a>Gmail</a></li>
+                    <li><a href="http://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.youtube.com">YouTube</a></li>
+                    <li><a href="http://www.github.com">Github</a></li>
+                    <li><a id="addNew" href="#"><b>Add New Link</b></a></li>
+                </ul>
+            </div>
+            <div id="content" class="col-md-offset-2 col-sm-offset-3 col-sm-9 col-md-10">
+                <h1> A Smarter Homepage </h1>		
+                <p> Created by Young Kim and Derrick Lui, this makes it easy to go to favorited links. </p>
+            </div>
+       </div>
+    </div>
+    <script src="script.js"></script>
    </body>
 </html>
