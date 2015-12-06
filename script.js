@@ -2,28 +2,11 @@ function load_page(id, page) {
   document.getElementById(id).innerHTML = '<object type="text/html" data="home.html"></object>';
 }
 
-window.onload = function() {
-    var a = document.getElementById("test");
-    
-    a.onclick = function() {
-        
-        return false;
-    }
-};
 var counter = 0;
 
 var addItem = function addItem(item,list,url){
 		var youngkimissohandsome = document.createElement("li");
-
-		var att1 = document.createAttribute("class");
-		att1.value="listlinks";
-		youngkimissohandsome.setAttributeNode(att1);
-
-		var att2 = document.createAttribute("id");
-		att2.value=url;
-		youngkimissohandsome.setAttributeNode(att2);
-
-		youngkimissohandsome.innerHTML = "<a>" + item + "</a>";
+		youngkimissohandsome.innerHTML = '<a class="listlinks" id="'+ url +'">' + item + "</a>";
 		list.appendChild(youngkimissohandsome);
 };
 
@@ -63,11 +46,13 @@ var buttonCallback = function buttonCallback(e){
 };
 
 var youngCallback = function youngCallback(e){
-		load_page("http://www.fun.com/");
+	load_page(e.target.id);
 };
 
-var load_page = function load_page(link){
-		document.getElementById("content").innerHTML=('<object type="text/html" data="' +link+ '" width="800p" height="600px" style="overflow:auto;border:5px ridge blue"></object>');
+var load_page = function load_page(link){ 
+        var clientHeight = 800;
+        var clientWidth = document.getElementById('content').clientWidth - 15;
+		document.getElementById("content").innerHTML=('<object type="text/html" data="' +link+ '" width="' + clientWidth + '" height="' + clientHeight + '" style="overflow:auto;border:5px ridge blue"></object>');
 };
 
 var button = document.getElementById("button");
