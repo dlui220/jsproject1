@@ -52,7 +52,7 @@ var youngCallback = function youngCallback(e){
 var load_page = function load_page(link){ 
         var clientHeight = 800;
         var clientWidth = document.getElementById('content').clientWidth - 15;
-		document.getElementById("content").innerHTML=('<object type="text/html" data="' +link+ '" width="' + clientWidth + '" height="' + clientHeight + '" style="overflow:auto;border:5px ridge blue"></object>');
+		document.getElementById("content").innerHTML=('<object type="text/html" data="' +link+ '" width="' + clientWidth + '" height="' + clientHeight + '" style="overflow:auto;border:2px ridge blue"></object>');
 };
 
 var button = document.getElementById("button");
